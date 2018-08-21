@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    mixin phone_list(phone)
+        .col-md-12
+            h2= phone.title
+            h5= phone.number
+            p
+                a.btn.btn-default(href= 'phone/' + phone._id, role='button') View details »
+    .container
+        .row
+            for phone in phones
+                +phone_list(phone)

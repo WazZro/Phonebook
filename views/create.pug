@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    .jumbotron
+        .container
+            form.form-horizontal(action='/create', method='post')
+                fieldset
+                    legend Creating the contact
+                    .form-group
+                        label.col-md-4.control-label(for='textinput') Enter the title
+                        .col-md-4
+                            input#textinput.form-control.input-md(name='title', type='text', required='')
+                    .form-group
+                        label.col-md-4.control-label(for='numberinput') Enter the number
+                        .col-md-4
+                            input#numberinput.form-control.input-md(name='number', type='tel', pattern='(\\+?\\d[- .]*){7,13}', required='')
+                    .form-group
+                        label.col-md-4.control-label(for='singlebutton')
+                        .col-md-4
+                            button#singlebutton.btn.btn-success(name='singlebutton') Create

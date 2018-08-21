@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    .jumbotron
+        .container
+            h1= phone.title
+            p
+                | #{phone.number}
+            a.btn.btn-default(href= '../edit/' + phone._id, role='button') Edit contact »
+            a.btn.btn-danger(href= '../delete/' + phone._id, role='button') Delete contact »

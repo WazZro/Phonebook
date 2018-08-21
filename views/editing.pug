@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    .jumbotron
+        .container
+            form.form-horizontal(action='/edit/' + phone._id, method='post')
+                fieldset
+                    legend Editing the contact
+                    .form-group
+                        label.col-md-4.control-label(for='textinput') Edit title
+                        .col-md-4
+                            input#textinput.form-control.input-md(name='title', type='text', value=phone.title)
+                    .form-group
+                        label.col-md-4.control-label(for='numberinput') Edit number
+                        .col-md-4
+                            input#numberinput.form-control.input-md(name='number', type='text', value=phone.number)
+                    .form-group
+                        label.col-md-4.control-label(for='singlebutton')
+                        .col-md-4
+                            button#singlebutton.btn.btn-success(name='singlebutton') Edit
